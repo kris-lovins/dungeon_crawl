@@ -17,6 +17,8 @@ target_sources(Dungeon
 
             entities/Entity.h
 
+            items/Item.h
+
             RoomApi.h
             rooms/IRoom.h
             rooms/SpikeTrapRoom.h
