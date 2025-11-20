@@ -15,11 +15,13 @@ add_library(Dungeon)
 
 target_sources(Dungeon
     PRIVATE
+        DungeonController.cpp
       DungeonEngine.cpp
       GetCh.h
     PUBLIC FILE_SET HEADERS
     BASE_DIRS .
-    FILES 
+    FILES
+        DungeonController.h
         DungeonEngine.h
         entities/Entity.h
 )
