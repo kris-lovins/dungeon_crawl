@@ -1,6 +1,6 @@
 #include <memory>
 #include "DungeonEngine.h"
-#include "SpikeTrapRoom.h"
+#include "rooms/SpikeTrapRoom.h"
 
 int main(int argc, char** argv)
 {

@@ -2,7 +2,7 @@
 #define SPIKE_ROOM_H
 
 #include <gtest/gtest.h>
-#include "SpikeTrapRoom.h"
+#include "rooms/SpikeTrapRoom.h"
 
 TEST(SpikeRoomTest, Creation) {
     SpikeTrapRoom room;

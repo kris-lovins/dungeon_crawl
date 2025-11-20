@@ -1,4 +1,4 @@
-#include "IRoom.h"
+#include "rooms/IRoom.h"
 
 class SpikeTrapRoom : public IRoom
 {
