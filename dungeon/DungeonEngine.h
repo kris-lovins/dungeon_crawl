@@ -29,6 +29,8 @@ class DungeonEngine
         std::vector<std::unique_ptr<IRoom>> rooms;
         RoomApi roomApi;
 
+        Player player;
+
         bool hasInput;
         char inputBuffer;
 };
