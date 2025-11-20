@@ -28,5 +28,6 @@ target_link_libraries(
     Dungeon
         PUBLIC
             IRoom
+            Item
 )
 

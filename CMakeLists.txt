@@ -18,6 +18,7 @@ enable_testing()
 
 add_subdirectory(rooms)
 add_subdirectory(dungeon)
+add_subdirectory(items)
 
 ################################################################
 
@@ -32,6 +33,7 @@ target_link_libraries(
             Dungeon
             IRoom
             SpikeTrapRoom
+            Item
 )
 
 install(
