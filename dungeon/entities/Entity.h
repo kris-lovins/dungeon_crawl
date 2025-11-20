@@ -1,5 +1,5 @@
+#include "Item.h"
 #include <vector>
-class item;
 
 struct position {
     int x;
@@ -19,5 +19,5 @@ class Entity {
         int health;
         char entitySymbol;
         position entityPosition;
-        std::vector<item> inventory;
+        std::vector<Item> inventory;
 };

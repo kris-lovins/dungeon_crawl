@@ -2,7 +2,7 @@
 
 #include <memory>
 #include <vector>
-#include "IRoom.h"
+#include "rooms/IRoom.h"
 #include "RoomApi.h"
 
 class DungeonEngine

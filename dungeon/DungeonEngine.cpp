@@ -4,7 +4,7 @@
 #include <thread>
 
 #include "DungeonEngine.h"
-#include "IRoom.h"
+#include "rooms/IRoom.h"
 #include "GetCh.h"
 
 DungeonEngine::DungeonEngine() :

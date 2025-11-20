@@ -14,10 +14,11 @@ FetchContent_Declare(
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
+
 enable_testing()
 
-add_subdirectory(rooms)
 add_subdirectory(dungeon)
+add_subdirectory(tests)
 
 ################################################################
 
@@ -30,8 +31,6 @@ target_link_libraries(
     DungeonCrawl
         PRIVATE
             Dungeon
-            IRoom
-            SpikeTrapRoom
 )
 
 install(
