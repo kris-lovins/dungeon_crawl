@@ -23,6 +23,7 @@ target_sources(Dungeon
 
             entities/Entity.h
             entities/Enemy.h
+            entities/MonsterStructs.h
 
             items/Item.h
             items/ItemStructs.h

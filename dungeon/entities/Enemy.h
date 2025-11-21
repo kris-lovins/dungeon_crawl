@@ -18,7 +18,8 @@ public:
     void setDefense(int newDefense) { defense = newDefense; }   
 
 private:
-        int attackPower;
-        int defense;
+    bool hasAttacked;
+    int attackPower;
+    int defense;
 };
 #endif

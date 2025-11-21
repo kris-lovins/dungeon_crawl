@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include "RoomApi.h"
+#include "entities/MonsterStructs.h"
 
 RoomApi::RoomApi()
 {
@@ -18,21 +19,47 @@ std::vector<std::string> RoomApi::getMessages()
     return messages;
 }
 
-void RoomApi::spawnEnemy(int x, int y, EnemyType enemyType)
+void RoomApi::spawnEnemy(int x, int y, MonsterType monsterType)
 {
-    if (enemyType == EnemyType::Goblin)
+    Enemy enemy;
+    switch (monsterType)
     {
-        Enemy e;
-        e.x = x;
-        e.y = y;
-        e.atk = 2;
-        e.def = 0;
-        e.hp = 10;
-        e.type = enemyType;
-        e.glyph = 'g';
-
-        enemyList.push_back(e);
+    case MonsterType::GOBLIN:
+        enemy = Goblin();
+        enemy.setEntityPosition({x, y});
+        break;
+    case MonsterType::HOBGOBLIN:
+        enemy = Hobgoblin();
+        enemy.setEntityPosition({x, y});
+        break;
+    case MonsterType::ORC:
+        enemy = Orc();
+        enemy.setEntityPosition({x, y});
+        break;
+    case MonsterType::TROLL:
+        enemy = Troll();
+        enemy.setEntityPosition({x, y});
+        break;
+    case MonsterType::DRAGON:
+        enemy = Dragon();
+        enemy.setEntityPosition({x, y});
+        break;
+    case MonsterType::SKELETON:
+        enemy = Skeleton();
+        enemy.setEntityPosition({x, y});
+        break;
+    case MonsterType::ZOMBIE:
+        enemy = Zombie();
+        enemy.setEntityPosition({x, y});
+        break;
+    case MonsterType::VAMPIRE:
+        enemy = Vampire();
+        enemy.setEntityPosition({x, y});
+        break;
+    default:
+        break;
     }
+    enemyList.push_back(enemy);
 }
 
 std::vector<Enemy> RoomApi::getEnemyList()

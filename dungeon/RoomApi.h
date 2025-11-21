@@ -2,6 +2,7 @@
 
 #include <memory>
 #include <vector>
+#include "entities/MonsterStructs.h"
 
 enum EnemyType
 {
