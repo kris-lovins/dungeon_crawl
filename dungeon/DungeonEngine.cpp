@@ -221,6 +221,24 @@ void DungeonEngine::render()
     std::cout << "movement: [w][a][s][d] | quit: [q] " << std::endl;
 }
 
+bool DungeonEngine::isCombat()
+{
+    bool retval = false;
+    auto player = roomApi.getPlayer();
+    auto enemyList = roomApi.getEnemyList();
+    for (auto enemy : enemyList)
+    {
+        if (enemy.x == player.x && enemy.y == player.y)
+        {
+            enemy.hp -= player.attack - enemy.def;
+            // update enemy? use itrs?
+            player.hp -= enemy.atk - player.defense;
+            roomApi.setPlayer(player);
+        }
+    }
+    return retval;
+}
+
 void DungeonEngine::loop()
 {
     auto last = std::chrono::steady_clock::now();
