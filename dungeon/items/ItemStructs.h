@@ -51,7 +51,6 @@ struct Gear : Item
     int buffValue;
     BuffType buffType;
     GearType gearType;
-    std::string description;
 };
 
 struct Weapon : Item
