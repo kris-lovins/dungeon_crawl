@@ -8,6 +8,7 @@ target_sources(
     PRIVATE
         DungeonController.test.cpp
         SpikeRoomTest.cpp
+        EnemyTests.cpp
 )
 
 target_link_libraries(
