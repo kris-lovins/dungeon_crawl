@@ -5,7 +5,8 @@ void DungeonController::tryPlayerMove(position p)
     PointInfo contents = getLocationContents(p);
     if (!contents.wall) {
         if(contents.entity.has_value()) {
-            //fight
+            fight(player, contents.entity.value());
+            
         } else {
             //move player
             if (contents.items.has_value()){
@@ -18,4 +19,10 @@ void DungeonController::tryPlayerMove(position p)
 PointInfo DungeonController::getLocationContents(position p)
 {
     rooms[currentRoom];
+}
+
+void DungeonController::fight(std::shared_ptr<Entity> e1, std::shared_ptr<Entity> e2)
+{
+    e1->takeDamage(e2->makeAttack());
+    e2->takeDamage(e1->makeAttack());
 }
