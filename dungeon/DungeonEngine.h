@@ -18,7 +18,7 @@ class DungeonEngine
 
         void handleInput();
         void render();
-        bool isCombat();
+        //bool isCombat();
         void getInput();
         void loop();
 
