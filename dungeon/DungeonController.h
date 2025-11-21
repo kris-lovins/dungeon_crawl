@@ -11,12 +11,6 @@ class Item;
 class Player : public Entity{};
 class Room;
 
-struct position
-{
-    int x;
-    int y;
-};
-
 struct PointInfo
 {
     std::optional<std::shared_ptr<Entity>> entity;
@@ -35,5 +29,5 @@ public:
 private:
     std::shared_ptr<Player> player;
     int currentRoom;
-    std::vector<Room> rooms;
+    std::vector<std::shared_ptr<Room>> rooms;
 };

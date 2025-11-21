@@ -18,7 +18,7 @@ void DungeonController::tryPlayerMove(position p)
 
 PointInfo DungeonController::getLocationContents(position p)
 {
-    rooms[currentRoom];
+    return PointInfo{};
 }
 
 void DungeonController::fight(std::shared_ptr<Entity> e1, std::shared_ptr<Entity> e2)
