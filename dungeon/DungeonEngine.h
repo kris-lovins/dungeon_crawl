@@ -18,7 +18,7 @@ class DungeonEngine
 
         void handleInput();
         void render();
-
+        //bool isCombat();
         void getInput();
         void loop();
 
@@ -28,6 +28,8 @@ class DungeonEngine
         int currentRoomIndex;
         std::vector<std::unique_ptr<IRoom>> rooms;
         RoomApi roomApi;
+
+        Player player;
 
         bool hasInput;
         char inputBuffer;

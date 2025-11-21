@@ -1,3 +1,7 @@
 _*
+
+.vscode/
+
 build/*
 install/*
+Testing/*
