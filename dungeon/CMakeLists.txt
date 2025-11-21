@@ -4,6 +4,7 @@ add_library(Dungeon)
 
 target_sources(Dungeon
     PRIVATE
+        DungeonController.cpp
         DungeonEngine.cpp
         GetCh.h
 
@@ -18,7 +19,8 @@ target_sources(Dungeon
 
     PUBLIC FILE_SET HEADERS
         BASE_DIRS ${CMAKE_CURRENT_LIST_DIR}
-        FILES 
+        FILES
+            DungeonController.h
             DungeonEngine.h
 
             entities/Entity.h

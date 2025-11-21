@@ -5,8 +5,10 @@ add_executable(dungeon_tests)
 
 target_sources(
     dungeon_tests 
-    PRIVATE SpikeRoomTest.cpp
-    PRIVATE EnemyTests.cpp
+    PRIVATE
+        DungeonController.test.cpp
+        SpikeRoomTest.cpp
+        EnemyTests.cpp
 )
 
 target_link_libraries(
