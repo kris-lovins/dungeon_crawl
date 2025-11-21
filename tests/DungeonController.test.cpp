@@ -1,13 +1,13 @@
 #include <DungeonController.h>
 #include <entities/Entity.h>
+#include <entities/Enemy.h>
 
 #include <gtest/gtest.h>
 
 #include <memory>
 
-TEST(DungeonController, fight){
+TEST(DungeonController, tryPlayerMove){
     DungeonController overlord;
-    std::shared_ptr<Entity> e1;
-    std::shared_ptr<Entity> e2;
-    overlord.fight(e1, e2);
+    std::shared_ptr<Entity> e = std::make_shared<Enemy>();
+    overlord.tryMove(e, {2,3});
 }

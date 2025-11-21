@@ -21,10 +21,8 @@ struct PointInfo
 class DungeonController
 {
 public:
-    void tryPlayerMove(position p);
+    void tryMove(std::shared_ptr<Entity> e, position p);
     PointInfo getLocationContents(position p);
-
-    void fight(std::shared_ptr<Entity> e1, std::shared_ptr<Entity> e2);
 
 private:
     std::shared_ptr<Player> player;
