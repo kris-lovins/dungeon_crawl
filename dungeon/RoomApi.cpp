@@ -35,7 +35,17 @@ void RoomApi::spawnEnemy(int x, int y, EnemyType enemyType)
     }
 }
 
+void RoomApi::setPlayer(Player newPlayer)
+{
+    player = newPlayer;
+}
+
 std::vector<Enemy> RoomApi::getEnemyList()
 {
     return enemyList;
+}
+
+Player RoomApi::getPlayer()
+{
+    return player;
 }
